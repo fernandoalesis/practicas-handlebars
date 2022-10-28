@@ -1,3 +1,19 @@
-<div>
+<div class="container text-bg-dark p-3">
     <h1>Bienvenidos, Pagina Home</h1>
+    <h2>Productos</h2>
+    <div class="container row mb-5p">
+        {{#each productos}}
+        <div class="col-md-auto card" style="width: 18rem; margin:.5rem">
+         <img src="{{this.Url}}" class="card-img-top" alt="...">
+            <div class="card-body text-bg-light p-3">
+                <h5 class="card-title">{{this.Name}}</h5>
+                <p class="card-text">${{this.Price}}</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
+
+
+        {{/each}}
+    </div>
+    <a class="btn btn-primary mt-2"href="http://localhost:8080/productos">Agregar Productos</a>
 </div>
